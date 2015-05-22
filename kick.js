@@ -70,6 +70,7 @@
 
     if (typeof params === 'object' && (method === 'POST' || method === 'PUT' || method === 'PATCH')) {
       payload.contentType = 'application/json';
+      payload.data = JSON.stringify(params);
     }
 
     // Don't process data on a non-GET request.

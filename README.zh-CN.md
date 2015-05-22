@@ -1,4 +1,4 @@
-# Memorable
+# Kick.js
 
 Javascript API client library.
 

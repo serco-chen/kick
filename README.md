@@ -10,8 +10,6 @@ jQuery >= 1.5
 
 ## Usage
 
-Specify which actions you would like to log:
-
 ```javascript
 // fire a "GET" request to "/posts/2/comments?q=nick"
 Kick("posts", 2, "comments").get({q: "nick"})

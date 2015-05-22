@@ -85,11 +85,13 @@
   };
 
   Kick.prototype.relative = function() {
-    this.relative_path = true
+    this.relative_path = true;
+    return this;
   };
 
   Kick.prototype.absolute = function() {
-    this.relative_path = false
+    this.relative_path = false;
+    return this;
   };
 
   // Export the Kick object for **Node.js**, with

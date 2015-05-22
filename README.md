@@ -5,6 +5,9 @@ Javascript API client library.
 **Note**
 If something doesn't work, feel free to report a bug or start an issue.
 
+## Dependency
+jQuery >= 1.5
+
 ## Usage
 
 Specify which actions you would like to log:

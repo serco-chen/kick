@@ -17,9 +17,12 @@
       return Kick.apply(instance, arguments);
     }
 
-    this._urlComponents = _.map(arguments, function(item){
-      return item.toString();
-    });
+    this._urlComponents = [];
+
+    var argumentLength = arguments.length;
+    for (var i = 0; i < argumentLength; i++) {
+      this._urlComponents.push(arguments[i].toString());
+    }
 
     return this;
   };
@@ -51,7 +54,7 @@
 
     var url = this._urlComponents.join('/');
 
-    if (!this.relative_path && url[0] && url[0] !== "/") {
+    if (!this.relative_path && (!url[0] || url[0] !== "/")) {
       url = "/" + url;
     }
 
@@ -80,7 +83,7 @@
       };
     }
 
-    var xhr = $.ajax(_.extend(payload, this.options));
+    var xhr = $.ajax($.extend(payload, this.options));
     return xhr;
   };
 
